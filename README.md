@@ -23,7 +23,7 @@ excel_file = pdlr.RowLimitedExcelFile(file, max_rows=50)
 ```
 Notes: 
 - If you use sheet_name as list to read more than one sheet, all dataframes will be generated with max_rows limit;
-- All another pd.read_excel() and pd.ExcelFile() parameters can be used;
+- All another pandas.read_excel() and pandas.ExcelFile() parameters can be used;
 - This package use Pandas and OpenpyXL dependencies and works only with openpyxl engine.
 
 

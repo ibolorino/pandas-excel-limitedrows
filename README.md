@@ -13,7 +13,7 @@ pip install pandas-excel-limitedrows
 ## Usage
 
 ```python
-import pandas-excel-limitedrows as pdlr
+import pandas_excel_limitedrows as pdlr
 
 # Generate DataFrame with first 50 rows
 df = pdlr.read_excel(file, max_rows=50)
@@ -23,7 +23,7 @@ excel_file = pdlr.RowLimitedExcelFile(file, max_rows=50)
 ```
 Notes: 
 - If you use sheet_name as list to read more than one sheet, all dataframes will be generated with max_rows limit;
-- All another pandas.read_excel() and pandas.ExcelFile() parameters can be used;
+- All others pandas.read_excel() and pandas.ExcelFile() parameters can be used;
 - This package use Pandas and OpenpyXL dependencies and works only with openpyxl engine.
 
 

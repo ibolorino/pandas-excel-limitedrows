@@ -6,6 +6,7 @@ from pandas._typing import (
     DtypeArg
 )
 
+# TODO: Implementar parâmetros first_rows e last_rows - 1.2.0
 
 def read_excel(
     io,
@@ -45,6 +46,11 @@ def read_excel(
         raise ValueError(
             "Engine should not be specified when passing "
             "an ExcelFile - ExcelFile already has the engine set"
+        )
+    
+    if max_rows and max_rows < 0:
+        raise ValueError(
+            "max_rows parameter must be greater or equal to 0"
         )
 
     try:
@@ -110,7 +116,10 @@ class RowLimitedReader(OpenpyxlReader):
             rows_list = list(enumerate(sheet.rows))
         else:
             for i in range(self.max_rows + 1):
-                rows_list.append(next(rows_enumerate))
+                try:
+                    rows_list.append(next(rows_enumerate))
+                except:
+                    break
         for row in rows_list:
             converted_row = [self._convert_cell(cell, convert_float) for cell in row[1]]
             while converted_row and converted_row[-1] == "":

@@ -13,7 +13,7 @@ with open('README.md', 'rb') as f:
 setup(
     name='pandas-excel-limitedrows',
     packages=find_packages(),
-    version='1.0.1',
+    version='1.1.0',
     description='Pandas Extension Package used to read Excel files with limit rows',
     long_description=readme,
     long_description_content_type="text/markdown",

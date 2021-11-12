@@ -13,14 +13,14 @@ with open('README.md', 'rb') as f:
 setup(
     name='pandas-excel-limitedrows',
     packages=find_packages(),
-    version='1.1.0',
+    version='2.0.0',
     description='Pandas Extension Package used to read Excel files with limit rows',
     long_description=readme,
     long_description_content_type="text/markdown",
     author='Ivan Bolorino',
     author_email='ivan.bolorino@gmail.com',
     url='https://github.com/ibolorino/pandas-excel-limitedrows',
-    install_requires=['pandas', 'openpyxl'],
+    install_requires=['pandas', 'openpyxl', 'pyxlsb', 'xlrd'],
     license='MIT',
     keywords=['dev', 'web', 'pandas', 'excel', 'data science'],
     classifiers=[

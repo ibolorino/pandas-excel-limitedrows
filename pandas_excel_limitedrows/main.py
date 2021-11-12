@@ -1,9 +1,9 @@
 
 from pandas import ExcelFile
 from pandas._typing import StorageOptions
-from engines._openpyxl import OpenpyxlLimitedReader
-from engines._pyxlsb import PyxlsbLimitedReader
-from engines._xlrd import XlrdLimitedReader
+from pandas_excel_limitedrows.engines._openpyxl import OpenpyxlLimitedReader
+from pandas_excel_limitedrows.engines._pyxlsb import PyxlsbLimitedReader
+from pandas_excel_limitedrows.engines._xlrd import XlrdLimitedReader
 
 # TODO: Implementar parâmetros first_rows e last_rows - 1.2.0
 

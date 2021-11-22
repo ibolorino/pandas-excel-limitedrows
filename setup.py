@@ -4,7 +4,7 @@
 from setuptools import find_packages, setup
 import re
 
-package = 'pandas-excel-limitedrows'
+package = 'pandas-excel-limitedrowsaa'
 
 with open('README.md', 'rb') as f:
     readme = f.read().decode('utf-8')
